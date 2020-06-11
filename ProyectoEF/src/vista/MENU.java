@@ -15,6 +15,7 @@ public class MENU extends javax.swing.JFrame {
 
     Usuarios mod;
     // private Mostrar mostrarN;
+    private AltasEmpleado formAltasEmpleado;
     private AltasPuesto formAltasPuesto;
     private AltasDepartamento formAltasDepartamento;
     private AltasConcepto formAltasConcepto;
@@ -23,6 +24,7 @@ public class MENU extends javax.swing.JFrame {
     private ModificacionesDep formModDep;
     private ModificacionesCon formModCon;
     private ModificacionesNomE formModNomE;
+    private ModificacionesEmpleado formModEmp;
     // private ChequesEmpleados formChequesEmpleados;
     // private buscar BuscarE;
 
@@ -83,11 +85,13 @@ public class MENU extends javax.swing.JFrame {
         jMenuItem8 = new javax.swing.JMenuItem();
         jMenuItem9 = new javax.swing.JMenuItem();
         jMenuItem10 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem11 = new javax.swing.JMenuItem();
         jMenuItem12 = new javax.swing.JMenuItem();
         jMenuItem13 = new javax.swing.JMenuItem();
         jMenuItem14 = new javax.swing.JMenuItem();
+        jMenuItem15 = new javax.swing.JMenuItem();
         FUNCIONES = new javax.swing.JMenu();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenuItem6 = new javax.swing.JMenuItem();
@@ -145,6 +149,14 @@ public class MENU extends javax.swing.JFrame {
         });
         MANTENIMIENTO.add(jMenuItem10);
 
+        jMenuItem2.setText("Altas de Empleado");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        MANTENIMIENTO.add(jMenuItem2);
+
         FuncionUsuarioMantenimiento.add(MANTENIMIENTO);
 
         jMenu2.setText("MODIFICACIONES");
@@ -180,6 +192,14 @@ public class MENU extends javax.swing.JFrame {
             }
         });
         jMenu2.add(jMenuItem14);
+
+        jMenuItem15.setText("Modificaciones de Empleado");
+        jMenuItem15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem15ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem15);
 
         FuncionUsuarioMantenimiento.add(jMenu2);
 
@@ -300,6 +320,18 @@ public class MENU extends javax.swing.JFrame {
         jDesktopPane1.add(formModNomE);
     }//GEN-LAST:event_jMenuItem14ActionPerformed
 
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        formAltasEmpleado = new AltasEmpleado();
+        jDesktopPane1.add(formAltasEmpleado);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem15ActionPerformed
+        // TODO add your handling code here:
+        formModEmp = new ModificacionesEmpleado();
+        jDesktopPane1.add(formModEmp);
+    }//GEN-LAST:event_jMenuItem15ActionPerformed
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -349,6 +381,8 @@ public class MENU extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem13;
     private javax.swing.JMenuItem jMenuItem14;
+    private javax.swing.JMenuItem jMenuItem15;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
