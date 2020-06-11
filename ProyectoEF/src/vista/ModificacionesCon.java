@@ -17,12 +17,12 @@ import javax.swing.JOptionPane;
  *
  * @author Tobar Arèvalo
  */
-public class ModificacionesPuesto extends javax.swing.JInternalFrame {
+public class ModificacionesCon extends javax.swing.JInternalFrame {
     String cod;
     /**
      * Creates new form ModEmpleados
      */
-    public ModificacionesPuesto() {
+    public ModificacionesCon() {
         initComponents();
         //jPanel1.setBorder(new fondovistas());
     }
@@ -46,8 +46,10 @@ public class ModificacionesPuesto extends javax.swing.JInternalFrame {
         txt_nombre = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        txt_estatus = new javax.swing.JTextField();
+        txt_efecto = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        txt_estatus = new javax.swing.JTextField();
 
         setClosable(true);
         setMaximizable(true);
@@ -95,42 +97,52 @@ public class ModificacionesPuesto extends javax.swing.JInternalFrame {
         jLabel2.setText("Nombre:");
 
         jLabel3.setFont(new java.awt.Font("Javanese Text", 0, 12)); // NOI18N
-        jLabel3.setText("Estatus:");
+        jLabel3.setText("Efecto:");
 
         jLabel6.setFont(new java.awt.Font("Javanese Text", 1, 20)); // NOI18N
-        jLabel6.setText("Modificaciones Puesto");
+        jLabel6.setText("Modificaciones Concepto");
+
+        jLabel4.setFont(new java.awt.Font("Javanese Text", 0, 12)); // NOI18N
+        jLabel4.setText("Estatus:");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING))
-                .addGap(105, 105, 105)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txt_estatus, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(jButton2)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jButton3))))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(txt_codigo, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1)))
-                .addGap(56, 56, 56))
-            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(138, 138, 138)
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 81, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4))
+                .addGap(105, 105, 105)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(txt_estatus, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(txt_efecto, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txt_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jButton2)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButton3)))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(txt_codigo, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton1)))
+                        .addGap(56, 56, 56))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -147,11 +159,15 @@ public class ModificacionesPuesto extends javax.swing.JInternalFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
-                .addGap(28, 28, 28)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_estatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_efecto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
-                .addGap(172, 172, 172)
+                .addGap(23, 23, 23)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(txt_estatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(131, 131, 131)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton3)
                     .addComponent(jButton2))
@@ -183,14 +199,15 @@ public class ModificacionesPuesto extends javax.swing.JInternalFrame {
         // TODO add your handling code here:  
         try{
             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/sin", "root", "");//Conecta con la base de datos sin
-            PreparedStatement pst = cn.prepareStatement("select * from puesto where codigo_puesto = ?");//Busca la variable puesto en la tabla de la base de datos
+            PreparedStatement pst = cn.prepareStatement("select * from concepto where codigo_concepto = ?");//Busca la variable puesto en la tabla de la base de datos
             pst.setString(1, txt_codigo.getText().trim());
             
             ResultSet rs = pst.executeQuery();
             
             if(rs.next()){//Captura las variables string y las convertimos a txt
-                txt_nombre.setText(rs.getString("nombre_puesto"));
-                txt_estatus.setText(rs.getString("estatus_puesto"));
+                txt_nombre.setText(rs.getString("nombre_concepto"));
+                txt_efecto.setText(rs.getString("efecto_concepto"));
+                txt_estatus.setText(rs.getString("estatus_concepto"));
                 cod=txt_codigo.getText();
             } else {
                 JOptionPane.showMessageDialog(null, "Puesto no registrado.");//Si no lo encuentra envia un mensaje de erros
@@ -208,14 +225,16 @@ public class ModificacionesPuesto extends javax.swing.JInternalFrame {
             String ID = txt_codigo.getText().trim();
 
             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/sin", "root", "");
-            PreparedStatement pst = cn.prepareStatement("update puesto set nombre_puesto = ?, estatus_puesto = ? where codigo_puesto=?");//Aqui especificamos que vamos a actualizar la base de datos
+            PreparedStatement pst = cn.prepareStatement("update concepto set nombre_concepto = ?, efecto_concepto = ?, estatus_concepto = ? where codigo_concepto=?");//Aqui especificamos que vamos a actualizar la base de datos
           
             pst.setString(1, txt_nombre.getText().trim());
-            pst.setString(2, txt_estatus.getText().trim());
-            pst.setString(3, cod.trim());
+            pst.setString(2, txt_efecto.getText().trim());
+            pst.setString(3, txt_estatus.getText().trim());
+            pst.setString(4, cod.trim());
             pst.executeUpdate();
             txt_codigo.setText("");
             txt_nombre.setText("");
+            txt_efecto.setText("");
             txt_estatus.setText("");
             ESTADO.setText("Modificación exitosa.");//CONFIRMACION DE QUE SE REALIZO CON EXITO LA ACTUALIZACION
             ESTADO.setText("");
@@ -231,14 +250,16 @@ public class ModificacionesPuesto extends javax.swing.JInternalFrame {
             String ID = txt_codigo.getText().trim();
 
             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/sin", "root", "");
-            PreparedStatement pst = cn.prepareStatement("update puesto set nombre_puesto = ?, estatus_puesto = ? where codigo_puesto=?");//Aqui especificamos que vamos a actualizar la base de datos
+            PreparedStatement pst = cn.prepareStatement("update concepto set nombre_concepto = ?, efecto_concepto = ?, estatus_concepto = ? where codigo_concepto=?");//Aqui especificamos que vamos a actualizar la base de datos
           
             pst.setString(1, txt_nombre.getText().trim());
-            pst.setString(2, txt_estatus.getText().trim());
-            pst.setString(3, cod.trim());
+            pst.setString(2, txt_efecto.getText().trim());
+            pst.setString(3, txt_estatus.getText().trim());
+            pst.setString(4, cod.trim());
             pst.executeUpdate();
             txt_codigo.setText("");
             txt_nombre.setText("");
+            txt_efecto.setText("");
             txt_estatus.setText("");
             ESTADO.setText("Modificación exitosa.");//CONFIRMACION DE QUE SE REALIZO CON EXITO LA ACTUALIZACION
             ESTADO.setText("");
@@ -261,9 +282,11 @@ public class ModificacionesPuesto extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txt_codigo;
+    private javax.swing.JTextField txt_efecto;
     private javax.swing.JTextField txt_estatus;
     private javax.swing.JTextField txt_nombre;
     // End of variables declaration//GEN-END:variables

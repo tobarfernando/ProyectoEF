@@ -68,9 +68,9 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txt_nombre" min="-2" pref="220" max="-2" attributes="0"/>
+                              <Component id="txt_fechaI" min="-2" pref="220" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="txt_estatus" min="-2" pref="220" max="-2" attributes="0"/>
+                                  <Component id="txt_fechaF" min="-2" pref="220" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jButton2" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="32767" attributes="0"/>
@@ -110,12 +110,12 @@
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="txt_nombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_fechaI" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="txt_estatus" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_fechaF" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="172" max="-2" attributes="0"/>
@@ -181,9 +181,9 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txt_codigo">
         </Component>
-        <Component class="javax.swing.JTextField" name="txt_nombre">
+        <Component class="javax.swing.JTextField" name="txt_fechaI">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_nombreActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_fechaIActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
@@ -191,7 +191,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Javanese Text" size="12" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Nombre:"/>
+            <Property name="text" type="java.lang.String" value="Fecha I."/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
@@ -199,17 +199,17 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Javanese Text" size="12" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Estatus:"/>
+            <Property name="text" type="java.lang.String" value="Fecha F."/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txt_estatus">
+        <Component class="javax.swing.JTextField" name="txt_fechaF">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel6">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Javanese Text" size="20" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Modificaciones Puesto"/>
+            <Property name="text" type="java.lang.String" value="Modificaciones NominaE"/>
           </Properties>
         </Component>
       </SubComponents>

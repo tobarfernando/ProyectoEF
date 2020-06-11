@@ -17,12 +17,12 @@ import javax.swing.JOptionPane;
  *
  * @author Tobar Arèvalo
  */
-public class ModificacionesPuesto extends javax.swing.JInternalFrame {
+public class ModificacionesNomE extends javax.swing.JInternalFrame {
     String cod;
     /**
      * Creates new form ModEmpleados
      */
-    public ModificacionesPuesto() {
+    public ModificacionesNomE() {
         initComponents();
         //jPanel1.setBorder(new fondovistas());
     }
@@ -43,10 +43,10 @@ public class ModificacionesPuesto extends javax.swing.JInternalFrame {
         jButton3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         txt_codigo = new javax.swing.JTextField();
-        txt_nombre = new javax.swing.JTextField();
+        txt_fechaI = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        txt_estatus = new javax.swing.JTextField();
+        txt_fechaF = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
 
         setClosable(true);
@@ -85,20 +85,20 @@ public class ModificacionesPuesto extends javax.swing.JInternalFrame {
         jLabel1.setFont(new java.awt.Font("Javanese Text", 0, 12)); // NOI18N
         jLabel1.setText("Codigo:");
 
-        txt_nombre.addActionListener(new java.awt.event.ActionListener() {
+        txt_fechaI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_nombreActionPerformed(evt);
+                txt_fechaIActionPerformed(evt);
             }
         });
 
         jLabel2.setFont(new java.awt.Font("Javanese Text", 0, 12)); // NOI18N
-        jLabel2.setText("Nombre:");
+        jLabel2.setText("Fecha I.");
 
         jLabel3.setFont(new java.awt.Font("Javanese Text", 0, 12)); // NOI18N
-        jLabel3.setText("Estatus:");
+        jLabel3.setText("Fecha F.");
 
         jLabel6.setFont(new java.awt.Font("Javanese Text", 1, 20)); // NOI18N
-        jLabel6.setText("Modificaciones Puesto");
+        jLabel6.setText("Modificaciones NominaE");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -114,9 +114,9 @@ public class ModificacionesPuesto extends javax.swing.JInternalFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_fechaI, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txt_estatus, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt_fechaF, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addComponent(jButton2)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -145,11 +145,11 @@ public class ModificacionesPuesto extends javax.swing.JInternalFrame {
                     .addComponent(jLabel1))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_fechaI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addGap(28, 28, 28)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_estatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_fechaF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
                 .addGap(172, 172, 172)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -183,14 +183,14 @@ public class ModificacionesPuesto extends javax.swing.JInternalFrame {
         // TODO add your handling code here:  
         try{
             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/sin", "root", "");//Conecta con la base de datos sin
-            PreparedStatement pst = cn.prepareStatement("select * from puesto where codigo_puesto = ?");//Busca la variable puesto en la tabla de la base de datos
+            PreparedStatement pst = cn.prepareStatement("select * from nominaE where codigo_nomina = ?");//Busca la variable puesto en la tabla de la base de datos
             pst.setString(1, txt_codigo.getText().trim());
             
             ResultSet rs = pst.executeQuery();
             
             if(rs.next()){//Captura las variables string y las convertimos a txt
-                txt_nombre.setText(rs.getString("nombre_puesto"));
-                txt_estatus.setText(rs.getString("estatus_puesto"));
+                txt_fechaI.setText(rs.getString("fecha_inicial_nomina"));
+                txt_fechaF.setText(rs.getString("fecha_final_nomina"));
                 cod=txt_codigo.getText();
             } else {
                 JOptionPane.showMessageDialog(null, "Puesto no registrado.");//Si no lo encuentra envia un mensaje de erros
@@ -208,15 +208,15 @@ public class ModificacionesPuesto extends javax.swing.JInternalFrame {
             String ID = txt_codigo.getText().trim();
 
             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/sin", "root", "");
-            PreparedStatement pst = cn.prepareStatement("update puesto set nombre_puesto = ?, estatus_puesto = ? where codigo_puesto=?");//Aqui especificamos que vamos a actualizar la base de datos
+            PreparedStatement pst = cn.prepareStatement("update nominaE set fecha_inicial_nomina = ?, fecha_final_nomina = ? where codigo_nomina=?");//Aqui especificamos que vamos a actualizar la base de datos
           
-            pst.setString(1, txt_nombre.getText().trim());
-            pst.setString(2, txt_estatus.getText().trim());
+            pst.setString(1, txt_fechaI.getText().trim());
+            pst.setString(2, txt_fechaF.getText().trim());
             pst.setString(3, cod.trim());
             pst.executeUpdate();
             txt_codigo.setText("");
-            txt_nombre.setText("");
-            txt_estatus.setText("");
+            txt_fechaI.setText("");
+            txt_fechaF.setText("");
             ESTADO.setText("Modificación exitosa.");//CONFIRMACION DE QUE SE REALIZO CON EXITO LA ACTUALIZACION
             ESTADO.setText("");
             
@@ -231,15 +231,15 @@ public class ModificacionesPuesto extends javax.swing.JInternalFrame {
             String ID = txt_codigo.getText().trim();
 
             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/sin", "root", "");
-            PreparedStatement pst = cn.prepareStatement("update puesto set nombre_puesto = ?, estatus_puesto = ? where codigo_puesto=?");//Aqui especificamos que vamos a actualizar la base de datos
+            PreparedStatement pst = cn.prepareStatement("update nominaE set fecha_inicial_nomina = ?, fecha_final_nomina = ? where codigo_nomina=?");//Aqui especificamos que vamos a actualizar la base de datos
           
-            pst.setString(1, txt_nombre.getText().trim());
-            pst.setString(2, txt_estatus.getText().trim());
+            pst.setString(1, txt_fechaI.getText().trim());
+            pst.setString(2, txt_fechaF.getText().trim());
             pst.setString(3, cod.trim());
             pst.executeUpdate();
             txt_codigo.setText("");
-            txt_nombre.setText("");
-            txt_estatus.setText("");
+            txt_fechaI.setText("");
+            txt_fechaF.setText("");
             ESTADO.setText("Modificación exitosa.");//CONFIRMACION DE QUE SE REALIZO CON EXITO LA ACTUALIZACION
             ESTADO.setText("");
             
@@ -248,9 +248,9 @@ public class ModificacionesPuesto extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void txt_nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_nombreActionPerformed
+    private void txt_fechaIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_fechaIActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_nombreActionPerformed
+    }//GEN-LAST:event_txt_fechaIActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -264,7 +264,7 @@ public class ModificacionesPuesto extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txt_codigo;
-    private javax.swing.JTextField txt_estatus;
-    private javax.swing.JTextField txt_nombre;
+    private javax.swing.JTextField txt_fechaF;
+    private javax.swing.JTextField txt_fechaI;
     // End of variables declaration//GEN-END:variables
 }

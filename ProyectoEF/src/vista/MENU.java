@@ -14,14 +14,15 @@ import modelo.Usuarios;
 public class MENU extends javax.swing.JFrame {
 
     Usuarios mod;
-   // private BajasEmpleados formBajasEmpleado;
-    // private ModificacionesPuesto formModPuesto;
     // private Mostrar mostrarN;
     private AltasPuesto formAltasPuesto;
     private AltasDepartamento formAltasDepartamento;
     private AltasConcepto formAltasConcepto;
     private AltasNominaE formAltasNominaE;
     private ModificacionesPuesto formModPuesto;
+    private ModificacionesDep formModDep;
+    private ModificacionesCon formModCon;
+    private ModificacionesNomE formModNomE;
     // private ChequesEmpleados formChequesEmpleados;
     // private buscar BuscarE;
 
@@ -279,19 +280,24 @@ public class MENU extends javax.swing.JFrame {
         // TODO add your handling code here:
         formModPuesto = new ModificacionesPuesto();
         jDesktopPane1.add(formModPuesto);
-        
     }//GEN-LAST:event_jMenuItem11ActionPerformed
 
     private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
         // TODO add your handling code here:
+        formModDep = new ModificacionesDep();
+        jDesktopPane1.add(formModDep);
     }//GEN-LAST:event_jMenuItem12ActionPerformed
 
     private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
         // TODO add your handling code here:
+        formModCon = new ModificacionesCon();
+        jDesktopPane1.add(formModCon);
     }//GEN-LAST:event_jMenuItem13ActionPerformed
 
     private void jMenuItem14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem14ActionPerformed
         // TODO add your handling code here:
+        formModNomE = new ModificacionesNomE();
+        jDesktopPane1.add(formModNomE);
     }//GEN-LAST:event_jMenuItem14ActionPerformed
 
     public static void main(String args[]) {

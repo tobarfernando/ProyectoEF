@@ -209,7 +209,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Javanese Text" size="20" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Modificaciones Puesto"/>
+            <Property name="text" type="java.lang.String" value="Modificaciones Departamento"/>
           </Properties>
         </Component>
       </SubComponents>

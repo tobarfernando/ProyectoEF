@@ -17,12 +17,12 @@ import javax.swing.JOptionPane;
  *
  * @author Tobar Arèvalo
  */
-public class ModificacionesPuesto extends javax.swing.JInternalFrame {
+public class ModificacionesDep extends javax.swing.JInternalFrame {
     String cod;
     /**
      * Creates new form ModEmpleados
      */
-    public ModificacionesPuesto() {
+    public ModificacionesDep() {
         initComponents();
         //jPanel1.setBorder(new fondovistas());
     }
@@ -98,7 +98,7 @@ public class ModificacionesPuesto extends javax.swing.JInternalFrame {
         jLabel3.setText("Estatus:");
 
         jLabel6.setFont(new java.awt.Font("Javanese Text", 1, 20)); // NOI18N
-        jLabel6.setText("Modificaciones Puesto");
+        jLabel6.setText("Modificaciones Departamento");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -183,14 +183,14 @@ public class ModificacionesPuesto extends javax.swing.JInternalFrame {
         // TODO add your handling code here:  
         try{
             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/sin", "root", "");//Conecta con la base de datos sin
-            PreparedStatement pst = cn.prepareStatement("select * from puesto where codigo_puesto = ?");//Busca la variable puesto en la tabla de la base de datos
+            PreparedStatement pst = cn.prepareStatement("select * from departamento where codigo_departamento = ?");//Busca la variable puesto en la tabla de la base de datos
             pst.setString(1, txt_codigo.getText().trim());
             
             ResultSet rs = pst.executeQuery();
             
             if(rs.next()){//Captura las variables string y las convertimos a txt
-                txt_nombre.setText(rs.getString("nombre_puesto"));
-                txt_estatus.setText(rs.getString("estatus_puesto"));
+                txt_nombre.setText(rs.getString("nombre_departamento"));
+                txt_estatus.setText(rs.getString("estatus_departamento"));
                 cod=txt_codigo.getText();
             } else {
                 JOptionPane.showMessageDialog(null, "Puesto no registrado.");//Si no lo encuentra envia un mensaje de erros
@@ -208,7 +208,7 @@ public class ModificacionesPuesto extends javax.swing.JInternalFrame {
             String ID = txt_codigo.getText().trim();
 
             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/sin", "root", "");
-            PreparedStatement pst = cn.prepareStatement("update puesto set nombre_puesto = ?, estatus_puesto = ? where codigo_puesto=?");//Aqui especificamos que vamos a actualizar la base de datos
+            PreparedStatement pst = cn.prepareStatement("update departamento set nombre_departamento = ?, estatus_departamento = ? where codigo_departamento=?");//Aqui especificamos que vamos a actualizar la base de datos
           
             pst.setString(1, txt_nombre.getText().trim());
             pst.setString(2, txt_estatus.getText().trim());
@@ -231,7 +231,7 @@ public class ModificacionesPuesto extends javax.swing.JInternalFrame {
             String ID = txt_codigo.getText().trim();
 
             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/sin", "root", "");
-            PreparedStatement pst = cn.prepareStatement("update puesto set nombre_puesto = ?, estatus_puesto = ? where codigo_puesto=?");//Aqui especificamos que vamos a actualizar la base de datos
+            PreparedStatement pst = cn.prepareStatement("update departamento set nombre_puesto = ?, estatus_departamento = ? where codigo_departamento=?");//Aqui especificamos que vamos a actualizar la base de datos
           
             pst.setString(1, txt_nombre.getText().trim());
             pst.setString(2, txt_estatus.getText().trim());
