@@ -14,10 +14,15 @@ import modelo.Usuarios;
 public class MENU extends javax.swing.JFrame {
 
     Usuarios mod;
-   // private BajasEmpleados formBajasEmpleado;
-    // private ModificacionesEmpleados formModEmpleado;
     // private Mostrar mostrarN;
-    // private AltasEmpleado formAltasEmpleado;
+    private AltasPuesto formAltasPuesto;
+    private AltasDepartamento formAltasDepartamento;
+    private AltasConcepto formAltasConcepto;
+    private AltasNominaE formAltasNominaE;
+    private ModificacionesPuesto formModPuesto;
+    private ModificacionesDep formModDep;
+    private ModificacionesCon formModCon;
+    private ModificacionesNomE formModNomE;
     // private ChequesEmpleados formChequesEmpleados;
     // private buscar BuscarE;
 
@@ -70,13 +75,19 @@ public class MENU extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenu1 = new javax.swing.JMenu();
         jDesktopPane1 = new javax.swing.JDesktopPane();
         FuncionUsuarioMantenimiento = new javax.swing.JMenuBar();
         MANTENIMIENTO = new javax.swing.JMenu();
-        jMenuItem7 = new javax.swing.JMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem8 = new javax.swing.JMenuItem();
+        jMenuItem9 = new javax.swing.JMenuItem();
+        jMenuItem10 = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        jMenuItem11 = new javax.swing.JMenuItem();
+        jMenuItem12 = new javax.swing.JMenuItem();
+        jMenuItem13 = new javax.swing.JMenuItem();
+        jMenuItem14 = new javax.swing.JMenuItem();
         FUNCIONES = new javax.swing.JMenu();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenuItem6 = new javax.swing.JMenuItem();
@@ -84,6 +95,8 @@ public class MENU extends javax.swing.JFrame {
         HERRAMIENTAS = new javax.swing.JMenu();
         SALIR = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
+
+        jMenu1.setText("jMenu1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -98,17 +111,9 @@ public class MENU extends javax.swing.JFrame {
             .addGap(0, 408, Short.MAX_VALUE)
         );
 
-        MANTENIMIENTO.setText("HERRAMIENTAS");
+        MANTENIMIENTO.setText("ALTAS");
 
-        jMenuItem7.setText("Buscar Empleado");
-        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem7ActionPerformed(evt);
-            }
-        });
-        MANTENIMIENTO.add(jMenuItem7);
-
-        jMenuItem1.setText("Altas de Empleado");
+        jMenuItem1.setText("Altas de puesto");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem1ActionPerformed(evt);
@@ -116,23 +121,67 @@ public class MENU extends javax.swing.JFrame {
         });
         MANTENIMIENTO.add(jMenuItem1);
 
-        jMenuItem2.setText("Bajas de Empleado");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem8.setText("Altas de Departamento");
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                jMenuItem8ActionPerformed(evt);
             }
         });
-        MANTENIMIENTO.add(jMenuItem2);
+        MANTENIMIENTO.add(jMenuItem8);
 
-        jMenuItem3.setText("Modificaciones de Empleado");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem9.setText("Altas de Concepto");
+        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                jMenuItem9ActionPerformed(evt);
             }
         });
-        MANTENIMIENTO.add(jMenuItem3);
+        MANTENIMIENTO.add(jMenuItem9);
+
+        jMenuItem10.setText("Altas de NominaE");
+        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem10ActionPerformed(evt);
+            }
+        });
+        MANTENIMIENTO.add(jMenuItem10);
 
         FuncionUsuarioMantenimiento.add(MANTENIMIENTO);
+
+        jMenu2.setText("MODIFICACIONES");
+
+        jMenuItem11.setText("Modificaciones de Puesto");
+        jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem11ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem11);
+
+        jMenuItem12.setText("Modificaciones de Departamento");
+        jMenuItem12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem12ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem12);
+
+        jMenuItem13.setText("Modificaciones de Concepto");
+        jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem13ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem13);
+
+        jMenuItem14.setText("Modificaciones de NominaE");
+        jMenuItem14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem14ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem14);
+
+        FuncionUsuarioMantenimiento.add(jMenu2);
 
         FUNCIONES.setText("FUNCIONES");
 
@@ -188,18 +237,6 @@ public class MENU extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        // TODO add your handling code here:
-       // formBajasEmpleado = new BajasEmpleados();
-        // jDesktopPane1.add(formBajasEmpleado);
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
-
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        // TODO add your handling code here:
-       // formModEmpleado = new ModificacionesEmpleados();
-        // jDesktopPane1.add(formModEmpleado);
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
-
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         // TODO add your handling code here:
         dispose();//Codigo  para  salir del Programa
@@ -217,15 +254,51 @@ public class MENU extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        //formAltasEmpleado = new AltasEmpleado();
-        // jDesktopPane1.add(formAltasEmpleado);
+        formAltasPuesto = new AltasPuesto();
+        jDesktopPane1.add(formAltasPuesto);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
         // TODO add your handling code here:
-       //   BuscarE = new buscar();
-        // jDesktopPane1.add(BuscarE);
-    }//GEN-LAST:event_jMenuItem7ActionPerformed
+        formAltasDepartamento = new AltasDepartamento();
+        jDesktopPane1.add(formAltasDepartamento);
+    }//GEN-LAST:event_jMenuItem8ActionPerformed
+
+    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
+        // TODO add your handling code here:
+        formAltasConcepto = new AltasConcepto();
+        jDesktopPane1.add(formAltasConcepto);
+    }//GEN-LAST:event_jMenuItem9ActionPerformed
+
+    private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
+        // TODO add your handling code here:
+        formAltasNominaE = new AltasNominaE();
+        jDesktopPane1.add(formAltasNominaE);
+    }//GEN-LAST:event_jMenuItem10ActionPerformed
+
+    private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
+        // TODO add your handling code here:
+        formModPuesto = new ModificacionesPuesto();
+        jDesktopPane1.add(formModPuesto);
+    }//GEN-LAST:event_jMenuItem11ActionPerformed
+
+    private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
+        // TODO add your handling code here:
+        formModDep = new ModificacionesDep();
+        jDesktopPane1.add(formModDep);
+    }//GEN-LAST:event_jMenuItem12ActionPerformed
+
+    private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
+        // TODO add your handling code here:
+        formModCon = new ModificacionesCon();
+        jDesktopPane1.add(formModCon);
+    }//GEN-LAST:event_jMenuItem13ActionPerformed
+
+    private void jMenuItem14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem14ActionPerformed
+        // TODO add your handling code here:
+        formModNomE = new ModificacionesNomE();
+        jDesktopPane1.add(formModNomE);
+    }//GEN-LAST:event_jMenuItem14ActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -268,12 +341,18 @@ public class MENU extends javax.swing.JFrame {
     private javax.swing.JMenu MANTENIMIENTO;
     private javax.swing.JMenu SALIR;
     private javax.swing.JDesktopPane jDesktopPane1;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem10;
+    private javax.swing.JMenuItem jMenuItem11;
+    private javax.swing.JMenuItem jMenuItem12;
+    private javax.swing.JMenuItem jMenuItem13;
+    private javax.swing.JMenuItem jMenuItem14;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JMenuItem jMenuItem8;
+    private javax.swing.JMenuItem jMenuItem9;
     // End of variables declaration//GEN-END:variables
 }
