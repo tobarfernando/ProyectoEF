@@ -81,6 +81,7 @@ public class MENU extends javax.swing.JFrame {
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenuItem6 = new javax.swing.JMenuItem();
         AYUDA = new javax.swing.JMenu();
+        HERRAMIENTAS = new javax.swing.JMenu();
         SALIR = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
 
@@ -155,6 +156,9 @@ public class MENU extends javax.swing.JFrame {
 
         AYUDA.setText("AYUDA");
         FuncionUsuarioMantenimiento.add(AYUDA);
+
+        HERRAMIENTAS.setText("HERRAMIENTAS");
+        FuncionUsuarioMantenimiento.add(HERRAMIENTAS);
 
         SALIR.setText("SALIR");
 
@@ -260,6 +264,7 @@ public class MENU extends javax.swing.JFrame {
     private javax.swing.JMenu AYUDA;
     private javax.swing.JMenu FUNCIONES;
     private javax.swing.JMenuBar FuncionUsuarioMantenimiento;
+    private javax.swing.JMenu HERRAMIENTAS;
     private javax.swing.JMenu MANTENIMIENTO;
     private javax.swing.JMenu SALIR;
     private javax.swing.JDesktopPane jDesktopPane1;

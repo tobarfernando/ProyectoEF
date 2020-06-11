@@ -71,6 +71,11 @@
             <Property name="text" type="java.lang.String" value="AYUDA"/>
           </Properties>
         </Menu>
+        <Menu class="javax.swing.JMenu" name="HERRAMIENTAS">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="HERRAMIENTAS"/>
+          </Properties>
+        </Menu>
         <Menu class="javax.swing.JMenu" name="SALIR">
           <Properties>
             <Property name="text" type="java.lang.String" value="SALIR"/>
