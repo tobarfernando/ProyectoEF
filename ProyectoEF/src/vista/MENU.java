@@ -17,7 +17,10 @@ public class MENU extends javax.swing.JFrame {
    // private BajasEmpleados formBajasEmpleado;
     // private ModificacionesEmpleados formModEmpleado;
     // private Mostrar mostrarN;
-    // private AltasEmpleado formAltasEmpleado;
+    private AltasPuesto formAltasPuesto;
+    private AltasDepartamento formAltasDepartamento;
+    private AltasConcepto formAltasConcepto;
+    private AltasNominaE formAltasNominaE;
     // private ChequesEmpleados formChequesEmpleados;
     // private buscar BuscarE;
 
@@ -77,6 +80,9 @@ public class MENU extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem8 = new javax.swing.JMenuItem();
+        jMenuItem9 = new javax.swing.JMenuItem();
+        jMenuItem10 = new javax.swing.JMenuItem();
         FUNCIONES = new javax.swing.JMenu();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenuItem6 = new javax.swing.JMenuItem();
@@ -98,7 +104,7 @@ public class MENU extends javax.swing.JFrame {
             .addGap(0, 408, Short.MAX_VALUE)
         );
 
-        MANTENIMIENTO.setText("HERRAMIENTAS");
+        MANTENIMIENTO.setText("ALTAS");
 
         jMenuItem7.setText("Buscar Empleado");
         jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
@@ -108,7 +114,7 @@ public class MENU extends javax.swing.JFrame {
         });
         MANTENIMIENTO.add(jMenuItem7);
 
-        jMenuItem1.setText("Altas de Empleado");
+        jMenuItem1.setText("Altas de puesto");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem1ActionPerformed(evt);
@@ -131,6 +137,30 @@ public class MENU extends javax.swing.JFrame {
             }
         });
         MANTENIMIENTO.add(jMenuItem3);
+
+        jMenuItem8.setText("Altas de Departamento");
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem8ActionPerformed(evt);
+            }
+        });
+        MANTENIMIENTO.add(jMenuItem8);
+
+        jMenuItem9.setText("Altas de Concepto");
+        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem9ActionPerformed(evt);
+            }
+        });
+        MANTENIMIENTO.add(jMenuItem9);
+
+        jMenuItem10.setText("Altas de NominaE");
+        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem10ActionPerformed(evt);
+            }
+        });
+        MANTENIMIENTO.add(jMenuItem10);
 
         FuncionUsuarioMantenimiento.add(MANTENIMIENTO);
 
@@ -217,8 +247,8 @@ public class MENU extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        //formAltasEmpleado = new AltasEmpleado();
-        // jDesktopPane1.add(formAltasEmpleado);
+        formAltasPuesto = new AltasPuesto();
+        jDesktopPane1.add(formAltasPuesto);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
@@ -226,6 +256,24 @@ public class MENU extends javax.swing.JFrame {
        //   BuscarE = new buscar();
         // jDesktopPane1.add(BuscarE);
     }//GEN-LAST:event_jMenuItem7ActionPerformed
+
+    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+        // TODO add your handling code here:
+        formAltasDepartamento = new AltasDepartamento();
+        jDesktopPane1.add(formAltasDepartamento);
+    }//GEN-LAST:event_jMenuItem8ActionPerformed
+
+    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
+        // TODO add your handling code here:
+        formAltasConcepto = new AltasConcepto();
+        jDesktopPane1.add(formAltasConcepto);
+    }//GEN-LAST:event_jMenuItem9ActionPerformed
+
+    private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
+        // TODO add your handling code here:
+        formAltasNominaE = new AltasNominaE();
+        jDesktopPane1.add(formAltasNominaE);
+    }//GEN-LAST:event_jMenuItem10ActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -269,11 +317,14 @@ public class MENU extends javax.swing.JFrame {
     private javax.swing.JMenu SALIR;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JMenuItem jMenuItem8;
+    private javax.swing.JMenuItem jMenuItem9;
     // End of variables declaration//GEN-END:variables
 }
